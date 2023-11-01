@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import { RouteComponentProps, Router } from '@reach/router';
 import './App.css';
+import Index from './pages/index';
+import Profile from './pages/profile';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-lg">
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route path="/" pageComponent={<Index />} />
+        <Route path="/profile" pageComponent={<Profile />} />
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+const Route = (
+  props: { pageComponent: JSX.Element } & RouteComponentProps
+) => props.pageComponent;
