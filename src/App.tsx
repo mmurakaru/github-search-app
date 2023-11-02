@@ -1,21 +1,17 @@
 import { RouteComponentProps, Router } from '@reach/router';
-import './App.css';
 import Index from './pages/index';
 import Profile from './pages/profile';
 
+let IndexPage = (props: RouteComponentProps) => <Index />
+let ProfilePage = (props: RouteComponentProps) => <Profile />
+
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Route path="/" pageComponent={<Index />} />
-        <Route path="/profile" pageComponent={<Profile />} />
-      </Router>
-    </div>
+    <Router>
+      <IndexPage path="/" />
+      <ProfilePage path="profile/:userName" />
+    </Router>
   );
 }
 
 export default App;
-
-const Route = (
-  props: { pageComponent: JSX.Element } & RouteComponentProps
-) => props.pageComponent;
