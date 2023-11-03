@@ -30,7 +30,7 @@ export default function Search({ label, onChange, query, result }: SearchProps) 
           placeholder="Search Github username"
         />
       </div>
-      {result.name && query.length > 0 ? (
+      {result?.name && query.length > 0 ? (
         <Link
           to={`profile/${result.username}`}
           className="flex mt-2 ... truncate rounded !p-2 border border-gray-100 hover:bg-gray-100 focus:bg-gray-100 items-center"
@@ -39,7 +39,7 @@ export default function Search({ label, onChange, query, result }: SearchProps) 
           <span className="pl-2 text-sm !m-0">{result.name}</span>
         </Link>
       ) :
-        !result.name && query.length > 0 &&
+        !result?.name && query.length > 0 &&
         (
           <div className="mt-2 grid h-24 place-items-center px-2 text-center text-sm rounded border border-gray-100">
             <p className="font-normal text-black">
