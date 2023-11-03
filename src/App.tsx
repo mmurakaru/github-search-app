@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <IndexPage path="/" />
-      <ProfilePage path="profile/:userName" />
+      <ProfilePage path="profile/:username" />
     </Router>
   );
 }
