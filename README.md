@@ -23,6 +23,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Future improvements
 
-- Index repos & add repo search/filter for name & language.
-- Add tests for search components
-- Add component stories
+- Paginate repos
+- Add tests for search/filter components & navigation
+- Add components stories

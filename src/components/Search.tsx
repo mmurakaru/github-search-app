@@ -10,7 +10,6 @@ type SearchProps = {
 }
 
 export default function Search({ label, onChange, query, result }: SearchProps) {
-  console.log(result)
   return (
     <div className="mx-auto max-w-xl">
       <label htmlFor="search" className="block text-lg font-medium leading-6 text-gray-900">
@@ -37,6 +36,7 @@ export default function Search({ label, onChange, query, result }: SearchProps) 
         >
           <UserIcon className="p-1 w-6 h-6" />
           <span className="pl-2 text-sm !m-0">{result.name}</span>
+          <span className="pl-2 text-sm !m-0 text-gray-500">{" - " + result.username}</span>
         </Link>
       ) :
         !result?.name && query.length > 0 &&

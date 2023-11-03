@@ -6,7 +6,7 @@ type Props = {
 
 function Layout({ children }: Props) {
   return (
-    <div className="p-12 sm:p-24">
+    <div className="px-12 sm:px-24 py-8 sm:py-12">
       {children}
     </div>
   );
