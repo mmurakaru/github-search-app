@@ -8,7 +8,7 @@ type FilterProps = {
 
 export default function Filter({ onChange, query }: FilterProps) {
   return (
-    <div className="w-auto sm:w-96 relative mt-2 flex items-center">
+    <div className="w-full lg:w-96 relative mt-2 flex items-center">
       <div className="absolute inset-y-0 left-0 flex py-1.5 px-1.5 z-0">
         <SearchIcon className="p-1 h-6 w-6" />
       </div>

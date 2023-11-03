@@ -1,7 +1,7 @@
 // source - https://heroicons.com/
 
 type Props = {
-  className: string
+  className?: string
 }
 
 const Search = (props: Props) => {
@@ -48,8 +48,40 @@ const Repo = (props: Props) => {
   )
 }
 
+const ArrowLeft = (props: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+    </svg>
+  )
+}
+
+const ArrowUpRight = (props: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+    </svg>
+  )
+}
+
 export {
   Search,
   User,
   Repo,
+  ArrowLeft,
+  ArrowUpRight,
 };
