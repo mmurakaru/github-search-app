@@ -6,7 +6,7 @@ function Index() {
   const { searchProfile, searchQuery, searchResult } = useProfileSearch()
   return (
     <Layout>
-      <Search title="Github profile search" onChange={searchProfile} query={searchQuery} result={searchResult} />
+      <Search label="Github profile search" onChange={searchProfile} query={searchQuery} result={searchResult} />
     </Layout>
   );
 }

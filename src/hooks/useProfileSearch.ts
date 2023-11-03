@@ -3,7 +3,7 @@ import { getUser } from '../lib'
 import { ChangeEvent } from 'react'
 
 interface Profile {
-  userName: string,
+  username: string,
   name: string
 }
 
@@ -12,12 +12,12 @@ function useProfileSearch() {
   const [searchResult, setSearchResult] = useState<Profile>()
 
   function searchProfile(e: ChangeEvent<HTMLInputElement>) {
-    const userName = e.target.value
-    setSearchQuery(userName)
-    getUser(userName)
+    const username = e.target.value
+    setSearchQuery(username)
+    getUser(username)
       .then(res => res.json())
       .then(data => setSearchResult({
-        userName: data.login,
+        username: data.login,
         name: data.name
       }))
       .catch(error => console.log(error))
